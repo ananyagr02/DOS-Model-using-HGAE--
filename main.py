@@ -13,7 +13,7 @@ app = FastAPI()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # --- Constants ---
-INPUT_DIM = 72           # Make sure this matches your training feature size
+INPUT_DIM = 46           # Make sure this matches your training feature size
 TIME_STEPS = 10          # Based on how you prepared sequences
 EMBED_DIM = 64
 NUM_HEADS = 2
