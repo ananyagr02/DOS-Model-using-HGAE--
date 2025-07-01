@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: dos-ensemble-api
+    name: dos-ensemble-api  # You can change this to any project name
     env: python
-    plan: free
+    plan: free  # Change to 'starter' or 'standard' if using paid tier
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHONUNBUFFERED
         value: "1"
