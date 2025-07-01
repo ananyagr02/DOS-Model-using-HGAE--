@@ -1,11 +1,10 @@
 fastapi
 uvicorn[standard]
-torch>=1.10.0
-pandas
+torch
 numpy
 scikit-learn
 lightgbm
+pandas
+pydantic
 pytorch-tabnet
-matplotlib
-seaborn
 joblib

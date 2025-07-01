@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: dos-model-api
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PORT
-        value: 10000
+    name: dos-ensemble-api
+    env: python
     plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
