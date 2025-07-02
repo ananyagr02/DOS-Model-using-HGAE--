@@ -10,6 +10,11 @@ from pytorch_tabnet.tab_model import TabNetClassifier
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the DoS Attack Detection API"}
+
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # --- Constants ---
