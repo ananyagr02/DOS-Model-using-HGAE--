@@ -86,7 +86,7 @@ lgb_model = lgb.Booster(model_file="lgb_model.txt")
 
 # --- Load TabNet Model ---
 tabnet_model = TabNetClassifier()
-tabnet_model.load_model("tabnet_model")
+tabnet_model.load_model("tabnet_model.zip")
 
 # --- Inference Schema ---
 class InferenceRequest(BaseModel):
